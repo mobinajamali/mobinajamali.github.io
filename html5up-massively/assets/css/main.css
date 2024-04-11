@@ -4127,7 +4127,7 @@ input, select, textarea {
 	content: " "; 
 	display: block; 
 	position: absolute; 
-	bottom: 5em; 
+	bottom: 3em; 
 	width: 2em; 
 	height: 100%; 
 	background-color: #42276d; 
