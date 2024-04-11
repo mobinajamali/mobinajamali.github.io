@@ -3963,7 +3963,7 @@ input, select, textarea {
 
 @media screen and (max-width: 736px) {
     .interests-main > .post {
-        padding: 4rem 2rem 2rem 2rem;
+        padding: 4rem 2rem 2rem 4rem;
     }
 
     .interests-main > .post header.major > .date {
