@@ -3846,7 +3846,7 @@ input, select, textarea {
 
 #main > .posts > article {
     border-color: #eeeeee;
-    border-left-width: 0; /* Adjusted border-left-width to 0 */
+    border-left-width: 2px;
     border-style: solid;
     border-top-width: 2px;
     text-align: center;
@@ -3856,36 +3856,50 @@ input, select, textarea {
     margin-bottom: 0;
 }
 
+#main > .posts > article:nth-child(2n - 1) {
+    border-left-width: 0;
+}
+
 #main > .posts > article:nth-child(-n + 2) {
     border-top-width: 0;
 }
 
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 980px) {
     #main > .posts > * {
-        padding: 1rem; /* Adjusted padding to 1rem */
+        padding: 1.5rem; /* Adjust padding as needed */
+    }
+}
+
+@media screen and (max-width: 736px) {
+    #main > .posts > article {
         width: 100%;
+        border-left-width: 0;
+        border-top-width: 2px;
     }
 
     #main > .posts > article:nth-child(odd) {
-        border-left-width: 2px; /* Changed to nth-child(odd) to set border-left-width on odd articles */
+        border-left-width: 2px;
     }
 
-    #main > .posts > article:nth-child(odd) > :first-child {
-        margin-top: 0; /* Removed margin-top for the first child of odd articles */
-    }
-
-    #main > .posts > article:nth-child(odd) + article {
-        border-top-width: 2px; /* Added border-top-width to separate odd and even articles */
+    #main > .posts > article:nth-child(2n) {
+        border-top-width: 2px;
     }
 
     #main > .posts > article .image {
-        max-width: 100%; /* Adjusted max-width to 100% */
+        max-width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
 
-    #main > * {
+    #main > .posts > * {
         padding: 1rem; /* Adjusted padding to 1rem */
+    }
+}
+
+
+@media screen and (max-width: 736px) {
+    #main > * {
+        padding: 1rem 1rem 0.1rem 1rem; /* Adjust padding as needed */
     }
 }
 
