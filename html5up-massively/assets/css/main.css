@@ -3871,39 +3871,36 @@ input, select, textarea {
 }
 
 @media screen and (max-width: 736px) {
-    #main > .posts > * {
-        width: 100%;
-        padding: 1rem; /* Adjust padding as needed */
+    #main > .posts {
+        display: block; /* Change to block to stack articles vertically */
     }
 
-    #main > .posts > article:nth-child(2n - 1) {
+    #main > .posts > article {
+        width: 100%;
+        border-left-width: 0;
+        border-top-width: 2px;
+        margin-bottom: 2rem; /* Add margin between articles */
+    }
+
+    #main > .posts > article:nth-child(odd) {
         border-left-width: 2px;
     }
 
-    #main > .posts > article:nth-child(-n + 2) {
+    #main > .posts > article:nth-child(2n) {
         border-top-width: 2px;
     }
 
-    #main > .posts > article:nth-child(n) {
-        border-left-width: 0;
-    }
-
-    #main > .posts > article:nth-child(-n + 1) {
-        border-top-width: 0;
-    }
-
     #main > .posts > article .image {
-        max-width: 25rem;
+        max-width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
-}
 
-@media screen and (max-width: 736px) {
-    #main > * {
-        padding: 1rem 1rem 0.1rem 1rem; /* Adjust padding as needed */
+    #main > .posts > * {
+        padding: 1rem; /* Adjusted padding to 1rem */
     }
 }
+
 
 @media screen and (max-width: 480px) {
     #main {
